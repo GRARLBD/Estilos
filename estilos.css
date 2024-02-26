@@ -1,0 +1,26 @@
+.caja {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .circulo {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 0%;
+    left:22%;
+  }
+
+  .imgBackground {
+    background-image: url("https://img.hotimg.com/silueta.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 100%;
+  }
+
+  .text-colegio {
+    color: #fff;
+  }
