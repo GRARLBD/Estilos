@@ -43,8 +43,17 @@
       </div>
 
       <script>
-        console.log("hola");
-        console.log(universal);
+         // Obtener la cadena de consulta de la URL
+    var queryString = window.location.search;
+
+// Crear un objeto URLSearchParams para parsear la cadena de consulta
+var urlParams = new URLSearchParams(queryString);
+
+// Obtener el valor del parámetro 'id'
+var id = urlParams.get('id');
+
+// Hacer lo que necesites con el valor de 'id'
+console.log("El valor de 'id' es: " + id);
       </script>
      
     </body>
