@@ -9,11 +9,7 @@ if (indexSeleccionado != null){
 
 // Escuchar mensajes del padre
 window.addEventListener('message', function(event) {
-  // Verificar el origen del mensaje para evitar ataques de terceros
-  if (event.origin !== 'https://tudominio.com') {
-      return;
-  }
-  
+
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
   console.log("Mensaje recibido desde el padre: " + contenido);
