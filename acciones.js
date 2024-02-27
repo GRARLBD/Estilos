@@ -3,7 +3,7 @@ var urlParams = new URLSearchParams(queryString);
 var indexSeleccionado = urlParams.get('indexSeleccionado');
 
 if (indexSeleccionado != null){
-  console.log("El valor de 'id' es: " + id);
+  console.log("El valor de 'id' es: " + indexSeleccionado);
   dibujar(indexSeleccionado);
 }
 
