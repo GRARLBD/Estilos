@@ -33,6 +33,6 @@ var gateway = `ws://${window.location.hostname}/ws`;
     document.getElementById('button').addEventListener('click', toggle);
   }
   function toggle(){
-    websocket.send('toggle');
     alert("hola mundo!");
+    websocket.send('toggle');
   }
