@@ -43,8 +43,8 @@
       </div>
 
       <script>
-        dibujar();
-        
+        dibujar(2);
+
         var gateway = `ws://${window.location.hostname}/ws`;
         var websocket;
         window.addEventListener("load", onLoad);
@@ -64,8 +64,8 @@
         }
         function onMessage(event) {
           var state;
-          //var index = parseInt(event.data );
-          //dibujar(index);
+          var index = parseInt(event.data );
+          dibujar(index);
           if (event.data == "1") {
             state = "ON";
           } else {
@@ -85,8 +85,7 @@
           //websocket.send('toggle');
         }
 
-        function dibujar() {
-          var selectedCirculo = 3;
+        function dibujar(selectedCirculo) {
           var caja = document.getElementById("caja");
           var x = "39%";
           var y = "22%";
