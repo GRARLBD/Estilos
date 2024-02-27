@@ -14,7 +14,7 @@ window.addEventListener('message', function(event) {
   var contenido = event.data;
   console.log("Mensaje recibido desde el padre: " + contenido);
 });;
-
+console.log("paso!");
 
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
