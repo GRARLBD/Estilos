@@ -39,6 +39,7 @@ function toggle() {
     //websocket.send('toggle');
 }
 
+alert("hola");
 function dibujar() {
 
     var selectedCirculo = 3;
