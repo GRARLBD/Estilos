@@ -16,6 +16,8 @@ window.addEventListener('message', function(event) {
 });;
 console.log("paso!");
 
+dibujar(-1);
+
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
   var x = "39%";
