@@ -18,6 +18,7 @@ function onClose(event) {
   setTimeout(initWebSocket, 2000);
 }
 function onMessage(event) {
+    alert(event.data);
   var state;
   var index = parseInt(event.data );
   dibujar(index);
