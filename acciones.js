@@ -1,4 +1,4 @@
-
+dibujar(3);
 var gateway = `ws://${window.location.hostname}/ws`;
 var websocket;
 window.addEventListener("load", onLoad);
