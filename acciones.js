@@ -33,6 +33,24 @@ var gateway = `ws://${window.location.hostname}/ws`;
     document.getElementById('button').addEventListener('click', toggle);
   }
   function toggle(){
-    alert("hola mundo!");
-    websocket.send('toggle');
+    //websocket.send('toggle');
+    var selectedCirculo = 6;
+      var caja = document.getElementById("caja");
+      var x = "39%"; 
+      var y = "22%"; 
+      var espaciado = "6%"; 
+      var salto = 0;
+      var limite = 1;
+      var index = 0;
+
+      for (var i = 0; i < limite; i++, salto++) {
+        index += 1;
+        var circulo = document.createElement("div");
+        circulo.classList.add("circulo");
+        circulo.id = "circulo" + (i + 1);
+
+        caja.appendChild(circulo);
+
+      
+      }  
   }
