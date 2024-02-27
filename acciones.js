@@ -1,4 +1,3 @@
-dibujar(5);
 
 var gateway = `ws://${window.location.hostname}/ws`;
 var websocket;
@@ -32,7 +31,7 @@ function onMessage(event) {
 function onLoad(event) {
   initWebSocket();
   initButton();
-  
+  dibujar(-1);
 }
 function initButton() {
   // document.getElementById('button').addEventListener('click', toggle);
