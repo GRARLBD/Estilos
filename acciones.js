@@ -1,5 +1,6 @@
 dibujar(3);
 
+
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
   var x = "39%";

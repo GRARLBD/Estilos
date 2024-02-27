@@ -6,18 +6,18 @@
     <style>
       body,
       html {
+        position: relative;
         background-color: aqua;
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
       }
-      .row-container {
-        width: 100%;
-        height: 100%;
-        background-color: blue;
-        overflow: hidden;
-        position: relative;
+      .contenedor {
+          position:absolute;
+          inset:0;
+          width: 100vw;
+          height: 100vh;
       }
       .first-row {
         background-color: lime;
@@ -73,14 +73,8 @@
         websocket.send("toggle");
       }
     </script>
-
-    <div class="row-container">
-      <object
-        type="text/html"
-        data="https://grarlbd.github.io/Estilos/onRealTime.html"
-        width="100%"
-        height="100%"
-      ></object>
-    </div>
+<object type="text/html" data="https://grarlbd.github.io/Estilos/onRealTime.html" class="contenedor" >
+        </object>
+   
   </body>
 </html>
