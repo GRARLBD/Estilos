@@ -1,40 +1,42 @@
 var gateway = `ws://${window.location.hostname}/ws`;
-  var websocket;
-  window.addEventListener('load', onLoad);
-  function initWebSocket() {
+var websocket;
+window.addEventListener('load', onLoad);
+function initWebSocket() {
     console.log('Trying to open a WebSocket connection...');
     websocket = new WebSocket(gateway);
-    websocket.onopen    = onOpen;
-    websocket.onclose   = onClose;
+    websocket.onopen = onOpen;
+    websocket.onclose = onClose;
     websocket.onmessage = onMessage; // <-- add this line
-  }
-  function onOpen(event) {
+}
+function onOpen(event) {
     console.log('Connection opened');
-  }
-  function onClose(event) {
+}
+function onClose(event) {
     console.log('Connection closed');
     setTimeout(initWebSocket, 2000);
-  }
-  function onMessage(event) {
+}
+function onMessage(event) {
     var state;
-    if (event.data == "1"){
-      state = "ON";
+    if (event.data == "1") {
+        state = "ON";
     }
-    else{
-      state = "OFF";
+    else {
+        state = "OFF";
     }
-    document.getElementById('state').innerHTML = state;
-  }
-  function onLoad(event) {
+    //document.getElementById('state').innerHTML = state;
+}
+function onLoad(event) {
     initWebSocket();
     initButton();
-  }
-  function initButton() {
-    document.getElementById('button').addEventListener('click', toggle);
-  }
-  function toggle(){
+}
+function initButton() {
+   // document.getElementById('button').addEventListener('click', toggle);
+}
+function toggle() {
     //websocket.send('toggle');
-    var selectedCirculo = 6;
+}
+
+var selectedCirculo = 6;
     var caja = document.getElementById("caja");
 
     var x = "39%"; 
@@ -105,5 +107,3 @@ var gateway = `ws://${window.location.hostname}/ws`;
         selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
       }
     }
-      
-  }
