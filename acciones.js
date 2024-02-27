@@ -1,44 +1,4 @@
 dibujar(3);
-var gateway = `ws://${window.location.hostname}/ws`;
-var websocket;
-window.addEventListener("load", onLoad);
-function initWebSocket() {
-  console.log("Trying to open a WebSocket connection...");
-  websocket = new WebSocket(gateway);
-  websocket.onopen = onOpen;
-  websocket.onclose = onClose;
-  websocket.onmessage = onMessage; // <-- add this line
-}
-function onOpen(event) {
-  console.log("Connection opened");
-}
-function onClose(event) {
-  console.log("Connection closed");
-  setTimeout(initWebSocket, 2000);
-}
-function onMessage(event) {
-    alert(event.data);
-  var state;
-  var index = parseInt(event.data );
-  dibujar(index);
-  if (event.data == "1") {
-    state = "ON";
-  } else {
-    state = "OFF";
-  }
-  //document.getElementById('state').innerHTML = state;
-}
-function onLoad(event) {
-  initWebSocket();
-  initButton();
-  dibujar(-1);
-}
-function initButton() {
-  // document.getElementById('button').addEventListener('click', toggle);
-}
-function toggle() {
-  //websocket.send('toggle');
-}
 
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
