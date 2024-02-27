@@ -1,4 +1,11 @@
-dibujar(3);
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var indexSeleccionado = urlParams.get('indexSeleccionado');
+
+if (indexSeleccionado != null){
+  console.log("El valor de 'id' es: " + id);
+  dibujar(indexSeleccionado);
+}
 
 
 function dibujar(selectedCirculo) {
