@@ -79,7 +79,8 @@
     </div>
   </div>
 <script>
-  var gateway = `wss://${window.location.hostname}/wss`;
+  var gateway = `ws://192.168.1.31/ws`;
+  console.log(gateway);
   var websocket;
   window.addEventListener('load', onLoad);
   function initWebSocket() {
