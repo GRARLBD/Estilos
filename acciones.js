@@ -17,8 +17,8 @@ function onClose(event) {
 }
 function onMessage(event) {
     var state;
-    //var index = parseInt(event.data );
-    //dibujar(index);
+    var index = parseInt(event.data );
+    dibujar(index);
     if (event.data == "1") {
         state = "ON";
     }
@@ -30,7 +30,7 @@ function onMessage(event) {
 function onLoad(event) {
     initWebSocket();
     initButton();
-    dibujar();
+    dibujar(-1);
 }
 function initButton() {
     // document.getElementById('button').addEventListener('click', toggle);
@@ -39,12 +39,9 @@ function toggle() {
     //websocket.send('toggle');
 }
 
-alert("hola");
-function dibujar() {
+function dibujar(selectedCirculo) {
 
-    var selectedCirculo = 3;
     var caja = document.getElementById("caja");
-
     var x = "39%";
     var y = "22%";
     var espaciado = "6%";
