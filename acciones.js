@@ -33,6 +33,7 @@ var gateway = `ws://${window.location.hostname}/ws`;
     document.getElementById('button').addEventListener('click', toggle);
   }
   function toggle(){
+    alert("hola");
     //websocket.send('toggle');
     var selectedCirculo = 6;
     var caja = document.getElementById("caja");
@@ -106,4 +107,5 @@ var gateway = `ws://${window.location.hostname}/ws`;
       }
     }
       
+    alert("mundo!!");
   }
