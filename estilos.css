@@ -13,7 +13,7 @@
 }
 
 .imgBackground {
-  background-image: url("https://img.hotimg.com/silueta.png");
+  background-image: url("https://img.hotimg.com/munieco0abd8ddbbdcb0acc.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -22,4 +22,12 @@
 
 .text-colegio {
   color: #fff;
+}
+
+.bgFondo{
+  background-image: url('https://img.hotimg.com/bg-fondo.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100%;
 }
