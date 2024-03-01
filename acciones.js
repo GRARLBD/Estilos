@@ -1,3 +1,5 @@
+console.log(zonas);
+
 var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
 var indexSeleccionado = urlParams.get('indexSeleccionado');
@@ -6,6 +8,7 @@ if (indexSeleccionado != null) {
   console.log("El valor de 'id' es: " + indexSeleccionado);
   dibujar(indexSeleccionado);
 }
+
 
 // Escuchar mensajes del padre
 window.addEventListener('message', function (event) {
