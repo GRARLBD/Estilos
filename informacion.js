@@ -4,7 +4,7 @@ window.addEventListener('message', function (event) {
 
     // Actualizar la página con el contenido del mensaje
     var contenido = event.data;
-    escribirSensor(indexSeleccionado);
+    escribirSensor(contenido);
   
   });;
 
