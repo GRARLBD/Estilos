@@ -13,10 +13,20 @@ window.addEventListener('message', function (event) {
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
   dibujar(contenido);
+  enviarDatosInterno(contenido);
+});
 
-});;
+
 
 dibujar(-1);
+
+function enviarDatosInterno(contenido) {
+  // Obtener el iframe
+  var iframe = document.getElementById("miIframe");
+
+  // Enviar datos al iframe
+  iframe.contentWindow.postMessage(contenido, '*');
+}
 
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
@@ -82,7 +92,7 @@ function dibujar(selectedCirculo) {
     circulo.id = "circulo" + (i + 1);
     var posicionX =
       "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-      circulo.textContent = index;
+    circulo.textContent = index;
 
     circulo.style.top = y;
     circulo.style.left = posicionX;
