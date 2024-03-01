@@ -13,7 +13,6 @@ window.addEventListener('message', function (event) {
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
   dibujar(contenido);
-  escribirSensor(contenido);
 
 });;
 
