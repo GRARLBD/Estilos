@@ -8,6 +8,7 @@ window.addEventListener('message', function (event) {
     escribirSensor(contenido);
   
   });;
+console.log("inforamcion");
 
 function escribirSensor(indexSeleccionado){
     var lbl = document.getElementById("lblSensorImpactado");
