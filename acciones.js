@@ -13,12 +13,21 @@ window.addEventListener('message', function (event) {
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
   dibujar(contenido);
-  escribirSensor(indexSeleccionado);
+  escribirSensor(contenido);
 
 });;
-console.log("paso!");
 
 dibujar(-1);
+
+function escribirSensor(indexSeleccionado){
+  var lbl = document.getElementById("lblSensorImpactado");
+
+  if (lbl != null){
+    lbl.textContent = "Sensor " + indexSeleccionado;
+  } else{
+    console.log("lbl lblSensorImpactado: null");
+  }
+}
 
 function escribirSensor(indexSeleccionado){
   var lbl = document.getElementById("lblSensorImpactado");
