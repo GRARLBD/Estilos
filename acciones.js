@@ -24,8 +24,12 @@ function enviarDatosInterno(contenido) {
   // Obtener el iframe
   var iframe = document.getElementById("miIframe");
 
-  // Enviar datos al iframe
-  iframe.contentWindow.postMessage(contenido, '*');
+  if (iframe != null) {
+    // Enviar datos al iframe
+    iframe.contentWindow.postMessage(contenido, '*');
+  } else {
+    console.log("iframe null");
+  }
 }
 
 function dibujar(selectedCirculo) {
