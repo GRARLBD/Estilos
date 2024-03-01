@@ -5,7 +5,6 @@ var indexSeleccionado = urlParams.get('indexSeleccionado');
 if (indexSeleccionado != null) {
   console.log("El valor de 'id' es: " + indexSeleccionado);
   dibujar(indexSeleccionado);
-  escribirSensor(indexSeleccionado);
 }
 
 // Escuchar mensajes del padre
@@ -14,6 +13,8 @@ window.addEventListener('message', function (event) {
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
   dibujar(contenido);
+  escribirSensor(indexSeleccionado);
+
 });;
 console.log("paso!");
 
@@ -24,6 +25,8 @@ function escribirSensor(indexSeleccionado){
 
   if (lbl != null){
     lbl.textContent = "Sensor " + indexSeleccionado;
+  } else{
+    console.log("lbl lblSensorImpactado: null");
   }
 }
 
