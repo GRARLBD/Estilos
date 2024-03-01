@@ -10,6 +10,14 @@
   background-color: red;
   position: absolute;
   border-radius: 50%;
+  color: white;
+  /* Color blanco */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  top: -10px;
+
+  font-weight: bold;
 }
 
 .imgBackground {
@@ -24,10 +32,11 @@
   color: #fff;
 }
 
-.bgFondo{
+.bgFondo {
   background-image: url('https://img.hotimg.com/bg-fondo.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 100%;
+
 }

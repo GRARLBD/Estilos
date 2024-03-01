@@ -2,13 +2,14 @@ var queryString = window.location.search;
 var urlParams = new URLSearchParams(queryString);
 var indexSeleccionado = urlParams.get('indexSeleccionado');
 
-if (indexSeleccionado != null){
+if (indexSeleccionado != null) {
   console.log("El valor de 'id' es: " + indexSeleccionado);
   dibujar(indexSeleccionado);
+  escribirSensor(indexSeleccionado);
 }
 
 // Escuchar mensajes del padre
-window.addEventListener('message', function(event) {
+window.addEventListener('message', function (event) {
 
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
@@ -17,6 +18,14 @@ window.addEventListener('message', function(event) {
 console.log("paso!");
 
 dibujar(-1);
+
+function escribirSensor(indexSeleccionado){
+  var lbl = document.getElementById("lblSensorImpactado");
+
+  if (lbl != null){
+    lbl.textContent = "Sensor " + indexSeleccionado;
+  }
+}
 
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
@@ -36,8 +45,9 @@ function dibujar(selectedCirculo) {
       "calc(" + x + " + (" + salto + " * " + espaciado + "))";
     circulo.style.top = y;
     circulo.style.left = posicionX;
-    caja.appendChild(circulo);
 
+    caja.appendChild(circulo);
+    circulo.textContent = index;
     if (index === selectedCirculo) {
       selectedCirculo = circulo;
       selectedCirculo.style.backgroundColor = "green";
@@ -59,6 +69,7 @@ function dibujar(selectedCirculo) {
       "calc(" + x + " + (" + salto + " * " + espaciado + "))";
     circulo.style.top = y;
     circulo.style.left = posicionX;
+    circulo.textContent = index;
 
     caja.appendChild(circulo);
     if (index === selectedCirculo) {
@@ -80,6 +91,7 @@ function dibujar(selectedCirculo) {
     circulo.id = "circulo" + (i + 1);
     var posicionX =
       "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.textContent = index;
 
     circulo.style.top = y;
     circulo.style.left = posicionX;
