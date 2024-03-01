@@ -18,18 +18,6 @@ window.addEventListener('message', function (event) {
 
 dibujar(-1);
 
-
-
-function escribirSensor(indexSeleccionado){
-  var lbl = document.getElementById("lblSensorImpactado");
-
-  if (lbl != null){
-    lbl.textContent = "Sensor " + indexSeleccionado;
-  } else{
-    console.log("lbl lblSensorImpactado: null");
-  }
-}
-
 function dibujar(selectedCirculo) {
   var caja = document.getElementById("caja");
   var x = "39%";

@@ -4,6 +4,7 @@ window.addEventListener('message', function (event) {
 
     // Actualizar la página con el contenido del mensaje
     var contenido = event.data;
+    console.log("dato: " + contenido);
     escribirSensor(contenido);
   
   });;
@@ -14,6 +15,6 @@ function escribirSensor(indexSeleccionado){
     if (lbl != null){
       lbl.textContent = "Sensor " + indexSeleccionado;
     } else{
-      console.log("lbl lblSensorImpactado: null");
+      console.log("lbl : null");
     }
   }
