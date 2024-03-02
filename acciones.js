@@ -8,8 +8,6 @@ if (indexSeleccionado != null) {
   dibujarFrontal(indexSeleccionado);
 }
 
-// Ejecutar la función incrementarYReiniciar cada 1 segundo (1000 milisegundos)
-var intervalo = setInterval(incrementarYReiniciar, 1000);
 window.addEventListener('message', function (event) {
   var contenido = event.data;
   index = 0;
