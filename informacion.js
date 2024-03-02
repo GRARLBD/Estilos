@@ -6,7 +6,7 @@ var zonas = [
     "BRAZO IZQUIERDO",
     "ABDOMEN 1",
     "ABDOMEN 2",
-    "PIERNA DERECHO",
+    "PIERNA DERECHA",
     "PIERNA IZQUIERDA",
     "NUCA",
     "BRAZO IZQUIERDO TRASERO",
@@ -19,6 +19,7 @@ var zonas = [
     "PIERNA DERECHA TRASERA"
 ];
 
+reproducir1();
 
 // Escuchar mensajes del padre
 window.addEventListener('message', function (event) {
@@ -45,15 +46,34 @@ function escribirSensor(indexSeleccionado) {
         console.log("lbl1 : null");
     }
 
-    if (indexSeleccionado == 1){
-        reproducir1();
+    switch(indexSeleccionado){
+        case 1: reproducir("audio/cabeza.mp3"); break;
+        case 2: reproducir("audio/impacto en BRAZO DER.mp3"); break;
+        case 3: reproducir("audio/impacto en PECHO 1.mp3"); break;
+        case 4: reproducir("audio/impacto en PECHO 2.mp3"); break;
+        case 5: reproducir("audio/impacto en BRAZO IZQ.mp3"); break;
+        case 6: reproducir("audio/impacto en ABDOMEN 1.mp3"); break;
+        case 7: reproducir("audio/impacto en ABDOMEN 2.mp3"); break;
+        case 8: reproducir("audio/impacto en PIERNA DE.mp3"); break;
+        case 9: reproducir("audio/impacto en PIERNA IZ.mp3"); break;
+        case 10: reproducir("audio/impacto en nuca.mp3"); break;
+        case 11: reproducir("audio/impacto en BRAZO IZQ trasero.mp3"); break;
+        case 12: reproducir("audio/impacto en espalda 1.mp3"); break;
+        case 13: reproducir("audio/impacto en espalda 2.mp3"); break;
+        case 14: reproducir("audio/impacto en BRAZO DER trasero.mp3"); break;
+        case 15: reproducir("audio/impacto en espalda 3.mp3"); break;
+        case 16: reproducir("audio/impacto en espalda 4.mp3"); break;
+        case 17: reproducir("audio/impacto en PIERNA IZ trasera.mp3"); break;
+        case 18: reproducir("audio/impacto en PIERNA DE trasera.mp3"); break;
     }
 }
 
-function reproducir1() {
-    // Obtener el elemento de audio
-    var audioPlayer = document.getElementById("audioPlayer");
-
-    // Reproducir el audio
-    audioPlayer.play();
+function reproducir(source) {
+    var audio = document.createElement("audio");
+    
+    audio.autoplay = true;
+    audio.muted = false;
+    audio.load()
+    audio.src = source;
+    audio.play(); 
 }
