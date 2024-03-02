@@ -14,10 +14,11 @@ window.addEventListener('message', function (event) {
 
   // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
+  index = 0;
+
   dibujarFrontal(contenido);
   dibujarVistaTrasera(contenido);
   enviarDatosInterno(contenido);
-  index = 0;
 });
 
 
