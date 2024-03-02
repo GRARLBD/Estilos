@@ -20,8 +20,8 @@
 }
 
 .circuloGreen {
-  width: 25px; /* Ajusta el tamaño a 25px */
-  height: 25px; /* Ajusta el tamaño a 25px */
+  width: 30px; /* Ajusta el tamaño a 25px */
+  height: 30px; /* Ajusta el tamaño a 25px */
   background-color: green; /* Cambia el color de fondo a verde */
   animation: agrandar 0.5s ease; /* Agrega una animación de agrandamiento de 0.5 segundos */
 }
