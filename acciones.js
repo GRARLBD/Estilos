@@ -196,7 +196,7 @@ function dibujarVistaTrasera(selectedCirculo) {
   var salto = 0;
   var limite = 1;
 
-
+  /*
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
     var circulo = document.createElement("div");
@@ -213,13 +213,13 @@ function dibujarVistaTrasera(selectedCirculo) {
       selectedCirculo = circulo;
       selectedCirculo.style.backgroundColor = "green";
     }
-  }
+  }*/
 
-  x = "26%";
+  x = "39%";
   y = "22%";
   espaciado = "13%";
   salto = 0;
-  limite = 4;
+  limite = 2;
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
@@ -287,6 +287,7 @@ function dibujarVistaTrasera(selectedCirculo) {
     }
   }
 
+  /*
   x = "35%";
   y = "65%";
   espaciado = "6%";
@@ -311,6 +312,7 @@ function dibujarVistaTrasera(selectedCirculo) {
     }
   }
 
+  
   x = "55%";
   y = "65%";
   espaciado = "6%";
@@ -333,5 +335,5 @@ function dibujarVistaTrasera(selectedCirculo) {
       selectedCirculo = circulo;
       selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
     }
-  }
+  }*/
 }
