@@ -8,6 +8,24 @@ if (indexSeleccionado != null) {
   dibujarFrontal(indexSeleccionado);
 }
 
+// Variable para almacenar el valor entero
+var contador = 0;
+
+// Función para incrementar el contador y reiniciarlo si llega a 13
+function incrementarYReiniciar() {
+    contador++; // Incrementar el contador
+    if (contador > 13) {
+        contador = 0; // Reiniciar el contador si supera 12
+    }
+    console.log("Contador: " + contador); // Mostrar el valor del contador en la consola
+    dibujarFrontal(contador);
+    dibujarVistaTrasera(contador);
+}
+
+
+// Ejecutar la función incrementarYReiniciar cada 1 segundo (1000 milisegundos)
+var intervalo = setInterval(incrementarYReiniciar, 1000);
+
 
 // Escuchar mensajes del padre
 window.addEventListener('message', function (event) {
@@ -40,10 +58,10 @@ function enviarDatosInterno(contenido) {
 
 function dibujarFrontal(selectedCirculo) {
   var caja = document.getElementById("caja1");
-// Eliminar todos los hijos de la caja
-while (caja.firstChild) {
-  caja.removeChild(caja.firstChild);
-}
+  // Eliminar todos los hijos de la caja
+  while (caja.firstChild) {
+    caja.removeChild(caja.firstChild);
+  }
 
   var x = "45%";
   var y = "5%";
@@ -89,19 +107,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + index;
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    circulo.textContent = index;
-
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -113,19 +140,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + index;
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    circulo.textContent = index;
-
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -137,19 +173,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + (i + 1);
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.textContent = index;
-
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -161,19 +206,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + (i + 1);
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.textContent = index;
-
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -185,19 +239,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + (i + 1);
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.textContent = index;
-
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 }
@@ -206,9 +269,9 @@ function dibujarVistaTrasera(selectedCirculo) {
   var caja = document.getElementById("caja2");
 
   // Eliminar todos los hijos de la caja
-while (caja.firstChild) {
-  caja.removeChild(caja.firstChild);
-}
+  while (caja.firstChild) {
+    caja.removeChild(caja.firstChild);
+  }
 
   var x = "45%";
   var y = "5%";
@@ -243,19 +306,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + index;
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    circulo.textContent = index;
-
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -267,19 +339,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + index;
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    circulo.textContent = index;
-
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -291,19 +372,28 @@ while (caja.firstChild) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + (i + 1);
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.textContent = index;
-
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-    caja.appendChild(circulo);
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
   }
 
@@ -356,4 +446,7 @@ while (caja.firstChild) {
       selectedCirculo.style.backgroundColor = "green"; // Cambiar el color del círculo resaltado a verde
     }
   }*/
+
+  index = 0;
+
 }

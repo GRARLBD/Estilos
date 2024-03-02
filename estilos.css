@@ -13,27 +13,35 @@
   color: white;
   justify-content: center;
   align-items: center;
-  top: -10px;
   font-weight: bold;
 }
 
 .circuloGreen {
-  width: 30px; /* Ajusta el tamaño a 25px */
-  height: 30px; /* Ajusta el tamaño a 25px */
-  background-color: green; /* Cambia el color de fondo a verde */
+  width: 30px;
+  height: 30px;
+  background-color: rgb(62, 241, 62);
   position: absolute;
   border-radius: 50%;
   color: white;
   justify-content: center;
   align-items: center;
-  top: -10px;
   font-weight: bold;
-  animation: agrandar 0.5s ease; /* Agrega una animación de agrandamiento de 0.5 segundos */
+  left: -20px;
+  top: -20px;
+  animation: agrandar 0.5s ease;
 }
 
 @keyframes agrandar {
-  0% { transform: scale(1); } /* Tamaño normal */
-  100% { transform: scale(1.5); } /* Se agranda al 150% */
+  0% {
+    transform: scale(1);
+    /* Tamaño normal */
+  }
+
+  100% {
+    transform: scale(1.5);
+    /* Se agranda al 150% */
+
+  }
 }
 
 .imgBackground {
@@ -57,8 +65,8 @@
 
 }
 
-.vista{
+.vista {
   font-weight: bold;
-    color: #FFF;
-    font-size: 24px;
+  color: #FFF;
+  font-size: 24px;
 }
