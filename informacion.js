@@ -19,7 +19,6 @@ var zonas = [
     "PIERNA DERECHA TRASERA"
 ];
 
-reproducir1();
 
 // Escuchar mensajes del padre
 window.addEventListener('message', function (event) {
