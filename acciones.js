@@ -16,6 +16,7 @@ window.addEventListener('message', function (event) {
   var contenido = event.data;
   dibujarFrontal(contenido);
   enviarDatosInterno(contenido);
+  index = 0;
 });
 
 
