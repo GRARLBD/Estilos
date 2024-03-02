@@ -50,20 +50,31 @@ function dibujarFrontal(selectedCirculo) {
 
   for (var i = 0; i < limite; i++, salto++) {
     index += 1;
-    var circulo = document.createElement("div");
-    circulo.classList.add("circulo");
-    circulo.id = "circulo" + (i + 1);
-    var posicionX =
-      "calc(" + x + " + (" + salto + " * " + espaciado + "))";
-    circulo.style.top = y;
-    circulo.style.left = posicionX;
-
-    caja.appendChild(circulo);
-    circulo.textContent = index;
     if (index === selectedCirculo) {
-      selectedCirculo = circulo;
-      selectedCirculo.style.backgroundColor = "green";
+      var circulo = document.createElement("div");
+      circulo.classList.add("circuloGreen");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
+    } else {
+      var circulo = document.createElement("div");
+      circulo.classList.add("circulo");
+      circulo.id = "circulo" + (i + 1);
+      var posicionX =
+        "calc(" + x + " + (" + salto + " * " + espaciado + "))";
+      circulo.style.top = y;
+      circulo.style.left = posicionX;
+
+      caja.appendChild(circulo);
+      circulo.textContent = index;
     }
+
+
   }
 
   x = "26%";

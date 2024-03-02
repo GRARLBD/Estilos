@@ -16,8 +16,19 @@
   align-items: center;
   color: white;
   top: -10px;
-
   font-weight: bold;
+}
+
+.circuloGreen {
+  width: 25px; /* Ajusta el tamaño a 25px */
+  height: 25px; /* Ajusta el tamaño a 25px */
+  background-color: green; /* Cambia el color de fondo a verde */
+  animation: agrandar 0.5s ease; /* Agrega una animación de agrandamiento de 0.5 segundos */
+}
+
+@keyframes agrandar {
+  0% { transform: scale(1); } /* Tamaño normal */
+  100% { transform: scale(1.5); } /* Se agranda al 150% */
 }
 
 .imgBackground {
