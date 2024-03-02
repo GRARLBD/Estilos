@@ -40,6 +40,10 @@ function enviarDatosInterno(contenido) {
 
 function dibujarFrontal(selectedCirculo) {
   var caja = document.getElementById("caja1");
+// Eliminar todos los hijos de la caja
+while (caja.firstChild) {
+  caja.removeChild(caja.firstChild);
+}
 
   var x = "45%";
   var y = "5%";
@@ -200,6 +204,11 @@ function dibujarFrontal(selectedCirculo) {
 
 function dibujarVistaTrasera(selectedCirculo) {
   var caja = document.getElementById("caja2");
+
+  // Eliminar todos los hijos de la caja
+while (caja.firstChild) {
+  caja.removeChild(caja.firstChild);
+}
 
   var x = "45%";
   var y = "5%";
