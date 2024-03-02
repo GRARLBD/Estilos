@@ -11,10 +11,8 @@
   position: absolute;
   border-radius: 50%;
   color: white;
-  /* Color blanco */
   justify-content: center;
   align-items: center;
-  color: white;
   top: -10px;
   font-weight: bold;
 }
@@ -23,6 +21,13 @@
   width: 30px; /* Ajusta el tamaño a 25px */
   height: 30px; /* Ajusta el tamaño a 25px */
   background-color: green; /* Cambia el color de fondo a verde */
+  position: absolute;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  font-weight: bold;
   animation: agrandar 0.5s ease; /* Agrega una animación de agrandamiento de 0.5 segundos */
 }
 
