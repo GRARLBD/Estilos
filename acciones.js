@@ -8,29 +8,9 @@ if (indexSeleccionado != null) {
   dibujarFrontal(indexSeleccionado);
 }
 
-// Variable para almacenar el valor entero
-var contador = 0;
-
-// Función para incrementar el contador y reiniciarlo si llega a 13
-function incrementarYReiniciar() {
-    contador++; // Incrementar el contador
-    if (contador > 13) {
-        contador = 0; // Reiniciar el contador si supera 12
-    }
-    console.log("Contador: " + contador); // Mostrar el valor del contador en la consola
-    dibujarFrontal(contador);
-    dibujarVistaTrasera(contador);
-}
-
-
 // Ejecutar la función incrementarYReiniciar cada 1 segundo (1000 milisegundos)
 var intervalo = setInterval(incrementarYReiniciar, 1000);
-
-
-// Escuchar mensajes del padre
 window.addEventListener('message', function (event) {
-
-  // Actualizar la página con el contenido del mensaje
   var contenido = event.data;
   index = 0;
 
@@ -447,6 +427,5 @@ function dibujarVistaTrasera(selectedCirculo) {
     }
   }*/
 
-  index = 0;
 
 }
